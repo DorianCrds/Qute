@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: qute
+Version: 0.1.0
+Summary: A customizable design system for PySide6 UIs
+Author: Dorian CARDOSO
+License: MIT
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# Qute
