@@ -25,3 +25,20 @@ QLabel {
 #custom_pushbutton:hover {
     background-color: #c2d4f7;
 }
+
+#custom_groupbox {
+    background-color: transparent;
+    border: 1px solid #dcdfe4;
+    border-radius: 8px;
+    margin-top: 20px;
+    padding: 12px;
+}
+
+#custom_groupbox:title {
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    padding: 0 6px;
+    color: #1e1f22;
+    background-color: transparent;
+    font-weight: 600;
+}
