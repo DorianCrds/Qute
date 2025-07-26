@@ -1,9 +1,27 @@
-QMainWindow {
-    background-color: #ffffff;
-    color: #222222;
+#custom_mainwindow {
+    background-color: #f5f6f8;
+    color: #1e1f22;
 }
+
+#custom_container_widget {
+    background-color: #f0f2f5;
+    border: 1px solid #dcdfe4;
+    border-radius: 12px;
+    padding: 12px;
+}
+
+QLabel {
+    color: #1e1f22;
+}
+
 #custom_pushbutton {
-    background-color: #f0f0f0;
-    border: 1px solid #cccccc;
+    background-color: #d7e3fc;
+    color: #1e1f22;
+    border: 1px solid #b2c4e0;
     padding: 6px 12px;
+    border-radius: 6px;
+}
+
+#custom_pushbutton:hover {
+    background-color: #c2d4f7;
 }
