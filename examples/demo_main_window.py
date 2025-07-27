@@ -14,7 +14,7 @@ class DemoMainWindow(CustomMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Qute Demo App")
-        self.resize(900, 750)
+        self.adjustSize()
 
         size_policy = QSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Expanding)
         self.setSizePolicy(size_policy)
