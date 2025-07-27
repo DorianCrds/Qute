@@ -8,6 +8,7 @@ from qute.components.containers.custom_groupbox import CustomGroupBox
 from qute.components.containers.custom_label import CustomLabel
 from qute.components.containers.custom_mainwindow import CustomMainWindow
 from qute.components.inputs.custom_lineedit import CustomLineEdit
+from qute.components.inputs.custom_textedit import CustomTextEdit
 
 
 class DemoMainWindow(CustomMainWindow):
@@ -43,12 +44,18 @@ class DemoMainWindow(CustomMainWindow):
         # Add stretch to push everything up
         self.standard_grid_layout.setRowStretch(3, 1)
 
+        self.standard_textedit = CustomTextEdit()
+        self.standard_grid_layout.addWidget(self.standard_textedit, 4, 0, 1, 2)
+
         # === Custom Widget Column ===
         self.custom_widget = CustomContainerWidget()
         self.custom_widget_v_layout = QVBoxLayout(self.custom_widget)
 
         self.embedded_groupbox = CustomGroupBox("Embedded group box example")
         self.custom_widget_v_layout.addWidget(self.embedded_groupbox)
+
+        self.embedded_textedit = CustomTextEdit()
+        self.custom_widget_v_layout.addWidget(self.embedded_textedit)
 
         self.embedded_lineedit = CustomLineEdit()
         self.custom_widget_v_layout.addWidget(self.embedded_lineedit)

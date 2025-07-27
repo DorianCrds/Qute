@@ -69,3 +69,15 @@
     color: #a1a3a8;
     font-weight: 400;
 }
+
+#custom_textedit {
+    background-color: #37393f;
+    color: #f1f3f5;
+    border: 1px solid #5c5f66;
+    border-radius: 6px;
+    padding: 6px;
+    font-size: 14px;
+    font-weight: 400;
+    selection-background-color: #3b82f6;
+    selection-color: #ffffff;
+}
