@@ -3,6 +3,7 @@ from PySide6.QtWidgets import QHBoxLayout, QWidget, QVBoxLayout
 from qute.components.buttons.custom_pushbuttons import CustomPushButton
 from qute.components.containers.custom_container_widget import CustomContainerWidget
 from qute.components.containers.custom_groupbox import CustomGroupBox
+from qute.components.containers.custom_label import CustomLabel
 from qute.components.containers.custom_mainwindow import CustomMainWindow
 
 
@@ -20,6 +21,11 @@ class DemoMainWindow(CustomMainWindow):
         self.standard_groupbox = CustomGroupBox("Example standard group box")
         self.standard_widget_v_layout.addWidget(self.standard_groupbox)
 
+        self.standard_label = CustomLabel("Standard label example")
+        self.standard_widget_v_layout.addWidget(self.standard_label)
+
+        self.standard_widget_v_layout.addStretch()
+
         self.theme_button = CustomPushButton("Switch app theme")
         self.standard_widget_v_layout.addWidget(self.theme_button)
 
@@ -27,10 +33,13 @@ class DemoMainWindow(CustomMainWindow):
         self.custom_widget = CustomContainerWidget()
         self.custom_widget_v_layout = QVBoxLayout(self.custom_widget)
 
-        self.embedded_groupbox = CustomGroupBox("Example embedded group box")
+        self.embedded_groupbox = CustomGroupBox("Embedded group box example")
         self.custom_widget_v_layout.addWidget(self.embedded_groupbox)
 
         self.custom_widget_v_layout.addStretch()
+
+        self.embedded_label = CustomLabel("Embedded label example")
+        self.custom_widget_v_layout.addWidget(self.embedded_label)
 
         self.useless_button = CustomPushButton("Useless button")
         self.custom_widget_v_layout.addWidget(self.useless_button)
