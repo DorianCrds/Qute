@@ -1,6 +1,8 @@
 import sys
 from PySide6.QtWidgets import QApplication
 
+import qute.resources.qute_rc
+
 from examples.demo_main_window import DemoMainWindow
 from qute.design.manager import DesignManager
 
