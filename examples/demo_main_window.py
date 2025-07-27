@@ -8,6 +8,7 @@ from qute.components.containers.custom_groupbox import CustomGroupBox
 from qute.components.containers.custom_label import CustomLabel
 from qute.components.containers.custom_mainwindow import CustomMainWindow
 from qute.components.inputs.custom_lineedit import CustomLineEdit
+from qute.components.inputs.custom_plaintextedit import CustomPlainTextEdit
 from qute.components.inputs.custom_textedit import CustomTextEdit
 
 
@@ -47,6 +48,9 @@ class DemoMainWindow(CustomMainWindow):
         self.standard_textedit = CustomTextEdit()
         self.standard_grid_layout.addWidget(self.standard_textedit, 4, 0, 1, 2)
 
+        self.standard_plaintextedit = CustomPlainTextEdit()
+        self.standard_grid_layout.addWidget(self.standard_plaintextedit, 5, 0, 1, 2)
+
         # === Custom Widget Column ===
         self.custom_widget = CustomContainerWidget()
         self.custom_widget_v_layout = QVBoxLayout(self.custom_widget)
@@ -61,6 +65,9 @@ class DemoMainWindow(CustomMainWindow):
         self.custom_widget_v_layout.addWidget(self.embedded_lineedit)
 
         self.custom_widget_v_layout.addStretch()
+
+        self.embedded_plaintextedit = CustomPlainTextEdit()
+        self.custom_widget_v_layout.addWidget(self.embedded_plaintextedit)
 
         self.embedded_label = CustomLabel("Embedded label example")
         self.custom_widget_v_layout.addWidget(self.embedded_label)
