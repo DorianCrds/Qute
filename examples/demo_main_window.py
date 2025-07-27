@@ -9,7 +9,7 @@ from qute.components.containers.custom_label import CustomLabel
 from qute.components.containers.custom_mainwindow import CustomMainWindow
 from qute.components.inputs.custom_lineedit import CustomLineEdit
 from qute.components.inputs.custom_plaintextedit import CustomPlainTextEdit
-from qute.components.inputs.custom_spinbox import CustomSpinBox
+from qute.components.inputs.custom_spinbox import CustomSpinBox, CustomDoubleSpinBox
 from qute.components.inputs.custom_textedit import CustomTextEdit
 
 
@@ -58,6 +58,9 @@ class DemoMainWindow(CustomMainWindow):
         self.standard_spinbox = CustomSpinBox()
         self.standard_grid_layout.addWidget(self.standard_spinbox, 6, 1)
 
+        self.standard_doublespinbox = CustomDoubleSpinBox()
+        self.standard_grid_layout.addWidget(self.standard_doublespinbox, 7, 1)
+
         # === Custom Widget Column ===
         self.custom_widget = CustomContainerWidget()
         self.custom_widget_v_layout = QVBoxLayout(self.custom_widget)
@@ -75,6 +78,9 @@ class DemoMainWindow(CustomMainWindow):
         self.custom_widget_v_layout.addWidget(self.embedded_lineedit)
 
         self.custom_widget_v_layout.addStretch()
+
+        self.embedded_doublespinbox = CustomDoubleSpinBox()
+        self.custom_widget_v_layout.addWidget(self.embedded_doublespinbox)
 
         self.embedded_plaintextedit = CustomPlainTextEdit()
         self.custom_widget_v_layout.addWidget(self.embedded_plaintextedit)

@@ -126,3 +126,45 @@
 #custom_spinbox::lineEdit {
     padding: 2px 4px;
 }
+
+#custom_doublespinbox {
+    background-color: #ffffff;
+    color: #1e1f22;
+    border: 1px solid #cfd3da;
+    border-radius: 6px;
+    padding: 2px 6px;
+    font-size: 14px;
+    font-weight: 500;
+    selection-background-color: #cce0ff;
+    selection-color: #1e1f22;
+}
+
+#custom_doublespinbox::up-button,
+#custom_doublespinbox::down-button {
+    background-color: #e4e7eb;
+    border: none;
+    width: 18px;
+}
+
+#custom_doublespinbox::up-button:hover,
+#custom_doublespinbox::down-button:hover {
+    background-color: #d1d5da;
+}
+
+#custom_doublespinbox::up-arrow,
+#custom_doublespinbox::down-arrow {
+    width: 10px;
+    height: 10px;
+}
+
+#custom_doublespinbox::up-arrow {
+    image: url(:/icons/arrow_up_light.png);
+}
+
+#custom_doublespinbox::down-arrow {
+    image: url(:/icons/arrow_down_light.png);
+}
+
+#custom_doublespinbox::lineEdit {
+    padding: 2px 4px;
+}
