@@ -49,3 +49,23 @@
     font-size: 16px;
     font-weight: 600;
 }
+
+#custom_lineedit {
+    background-color: #37393f;
+    color: #f1f3f5;
+    border: 1px solid #5c5f66;
+    border-radius: 6px;
+    padding: 6px 8px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+#custom_lineedit:focus {
+    border: 1px solid #3b82f6;
+    outline: none;
+}
+
+#custom_lineedit::placeholder {
+    color: #a1a3a8;
+    font-weight: 400;
+}
