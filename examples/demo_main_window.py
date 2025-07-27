@@ -7,6 +7,7 @@ from qute.components.containers.custom_container_widget import CustomContainerWi
 from qute.components.containers.custom_groupbox import CustomGroupBox
 from qute.components.containers.custom_label import CustomLabel
 from qute.components.containers.custom_mainwindow import CustomMainWindow
+from qute.components.inputs.custom_combobox import CustomComboBox
 from qute.components.inputs.custom_lineedit import CustomLineEdit
 from qute.components.inputs.custom_plaintextedit import CustomPlainTextEdit
 from qute.components.inputs.custom_spinbox import CustomSpinBox, CustomDoubleSpinBox
@@ -61,6 +62,12 @@ class DemoMainWindow(CustomMainWindow):
         self.standard_doublespinbox = CustomDoubleSpinBox()
         self.standard_grid_layout.addWidget(self.standard_doublespinbox, 7, 1)
 
+        self.standard_combobox = CustomComboBox()
+        self.standard_combobox.addItem("Option one")
+        self.standard_combobox.addItem("Option two")
+        self.standard_combobox.addItem("Option three")
+        self.standard_grid_layout.addWidget(self.standard_combobox, 8, 0, 1, 2)
+
         # === Custom Widget Column ===
         self.custom_widget = CustomContainerWidget()
         self.custom_widget_v_layout = QVBoxLayout(self.custom_widget)
@@ -87,6 +94,12 @@ class DemoMainWindow(CustomMainWindow):
 
         self.embedded_label = CustomLabel("Embedded label example")
         self.custom_widget_v_layout.addWidget(self.embedded_label)
+
+        self.embedded_combobox = CustomComboBox()
+        self.embedded_combobox.addItem("Option one")
+        self.embedded_combobox.addItem("Option two")
+        self.embedded_combobox.addItem("Option three")
+        self.custom_widget_v_layout.addWidget(self.embedded_combobox)
 
         self.useless_button = CustomPushButton("Useless button")
         self.custom_widget_v_layout.addWidget(self.useless_button)
