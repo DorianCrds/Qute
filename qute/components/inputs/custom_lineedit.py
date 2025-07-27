@@ -6,3 +6,4 @@ class CustomLineEdit(QLineEdit):
         super().__init__()
 
         self.setObjectName("custom_lineedit")
+        self.setMinimumWidth(150)
