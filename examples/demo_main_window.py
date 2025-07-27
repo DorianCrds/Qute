@@ -9,6 +9,7 @@ from qute.components.containers.custom_label import CustomLabel
 from qute.components.containers.custom_mainwindow import CustomMainWindow
 from qute.components.inputs.custom_lineedit import CustomLineEdit
 from qute.components.inputs.custom_plaintextedit import CustomPlainTextEdit
+from qute.components.inputs.custom_spinbox import CustomSpinBox
 from qute.components.inputs.custom_textedit import CustomTextEdit
 
 
@@ -51,6 +52,12 @@ class DemoMainWindow(CustomMainWindow):
         self.standard_plaintextedit = CustomPlainTextEdit()
         self.standard_grid_layout.addWidget(self.standard_plaintextedit, 5, 0, 1, 2)
 
+        self.standard_label_2 = CustomLabel("Second standard label:")
+        self.standard_grid_layout.addWidget(self.standard_label_2, 6, 0)
+
+        self.standard_spinbox = CustomSpinBox()
+        self.standard_grid_layout.addWidget(self.standard_spinbox, 6, 1)
+
         # === Custom Widget Column ===
         self.custom_widget = CustomContainerWidget()
         self.custom_widget_v_layout = QVBoxLayout(self.custom_widget)
@@ -60,6 +67,9 @@ class DemoMainWindow(CustomMainWindow):
 
         self.embedded_textedit = CustomTextEdit()
         self.custom_widget_v_layout.addWidget(self.embedded_textedit)
+
+        self.embedded_spinbox = CustomSpinBox()
+        self.custom_widget_v_layout.addWidget(self.embedded_spinbox)
 
         self.embedded_lineedit = CustomLineEdit()
         self.custom_widget_v_layout.addWidget(self.embedded_lineedit)

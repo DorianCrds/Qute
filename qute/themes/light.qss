@@ -84,3 +84,45 @@
     selection-background-color: #cce0ff;
     selection-color: #1e1f22;
 }
+
+#custom_spinbox {
+    background-color: #ffffff;
+    color: #1e1f22;
+    border: 1px solid #cfd3da;
+    border-radius: 6px;
+    padding: 2px 6px;
+    font-size: 14px;
+    font-weight: 500;
+    selection-background-color: #cce0ff;
+    selection-color: #1e1f22;
+}
+
+#custom_spinbox::up-button,
+#custom_spinbox::down-button {
+    background-color: #e4e7eb;
+    border: none;
+    width: 18px;
+}
+
+#custom_spinbox::up-button:hover,
+#custom_spinbox::down-button:hover {
+    background-color: #d1d5da;
+}
+
+#custom_spinbox::up-arrow,
+#custom_spinbox::down-arrow {
+    width: 10px;
+    height: 10px;
+}
+
+#custom_spinbox::up-arrow {
+    image: url(:/icons/arrow_up_light.png);
+}
+
+#custom_spinbox::down-arrow {
+    image: url(:/icons/arrow_down_light.png);
+}
+
+#custom_spinbox::lineEdit {
+    padding: 2px 4px;
+}
