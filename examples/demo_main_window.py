@@ -8,6 +8,7 @@ from qute.components.containers.custom_groupbox import CustomGroupBox
 from qute.components.containers.custom_label import CustomLabel
 from qute.components.containers.custom_mainwindow import CustomMainWindow
 from qute.components.inputs.custom_combobox import CustomComboBox
+from qute.components.inputs.custom_datetimeedit import CustomDateEdit
 from qute.components.inputs.custom_lineedit import CustomLineEdit
 from qute.components.inputs.custom_plaintextedit import CustomPlainTextEdit
 from qute.components.inputs.custom_spinbox import CustomSpinBox, CustomDoubleSpinBox
@@ -67,6 +68,9 @@ class DemoMainWindow(CustomMainWindow):
         self.standard_combobox.addItem("Option two")
         self.standard_combobox.addItem("Option three")
         self.standard_grid_layout.addWidget(self.standard_combobox, 8, 0, 1, 2)
+
+        self.standard_dateedit = CustomDateEdit()
+        self.standard_grid_layout.addWidget(self.standard_dateedit, 9, 1)
 
         # === Custom Widget Column ===
         self.custom_widget = CustomContainerWidget()

@@ -224,3 +224,50 @@
 #custom_combobox QAbstractItemView::item:hover {
     background-color: #3a3d42;
 }
+
+#custom_dateedit {
+    background-color: #37393f;
+    color: #f1f3f5;
+    border: 1px solid #5c5f66;
+    border-radius: 6px;
+    padding: 4px 6px;
+    font-size: 14px;
+    font-weight: 500;
+    selection-background-color: #3b82f6;
+    selection-color: #ffffff;
+}
+
+#custom_dateedit:focus {
+    border: 1px solid #3b82f6;
+    outline: none;
+}
+
+#custom_dateedit::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 20px;
+    border-left: 1px solid #5c5f66;
+    background-color: #4b4e55;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+#custom_dateedit::drop-down:hover {
+    background-color: #5a5d66;
+}
+
+#custom_dateedit::down-arrow {
+    image: url(:/icons/arrow_down_dark.png);
+    width: 10px;
+    height: 10px;
+}
+
+#custom_dateedit::up-arrow {
+    image: url(:/icons/arrow_up_dark.png);
+    width: 10px;
+    height: 10px;
+}
+
+#custom_dateedit::lineEdit {
+    padding: 2px 4px;
+}
