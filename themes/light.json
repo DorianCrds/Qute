@@ -1,0 +1,15 @@
+{
+  "colors": {
+    "primary": "#2980b9",
+    "background": "#ffffff",
+    "text": "#000000"
+  },
+  "radius": {
+    "sm": "4px",
+    "md": "6px"
+  },
+  "spacing": {
+    "sm": "6px",
+    "md": "10px"
+  }
+}
