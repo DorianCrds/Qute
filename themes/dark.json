@@ -1,15 +1,51 @@
 {
   "colors": {
-    "primary": "#3498db",
-    "background": "#121212",
-    "text": "#ffffff"
-  },
-  "radius": {
-    "sm": "4px",
-    "md": "6px"
-  },
-  "spacing": {
-    "sm": "6px",
-    "md": "10px"
+    "base": {
+      "background": "#0F172A",
+      "surface": "#111827",
+      "surface_secondary": "#1F2937"
+    },
+
+    "text": {
+      "primary": "#E5E7EB",
+      "secondary": "#9CA3AF",
+      "inverse": "#111827"
+    },
+
+    "border": {
+      "default": "#374151",
+      "strong": "#4B5563"
+    },
+
+    "primary": {
+      "main": "#6366F1",
+      "hover": "#5458E6",
+      "pressed": "#4338CA"
+    },
+
+    "secondary": {
+      "background": "#1F2937",
+      "hover": "#374151"
+    },
+
+    "state": {
+      "disabled_bg": "#374151",
+      "disabled_text": "#6B7280"
+    },
+
+    "sidebar": {
+      "background": "#020617",
+      "hover": "#1E293B",
+      "active": "#312E81",
+      "text": "#9CA3AF",
+      "text_active": "#818CF8"
+    },
+
+    "status": {
+      "info_bg": "#1E3A8A",
+      "info_text": "#93C5FD",
+      "success_bg": "#064E3B",
+      "success_text": "#6EE7B7"
+    }
   }
 }

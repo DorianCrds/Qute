@@ -1,0 +1,52 @@
+{
+  "colors": {
+    "base": {
+      "background": "",
+      "surface": "",
+      "surface_secondary": ""
+    },
+
+    "text": {
+      "primary": "",
+      "secondary": "",
+      "inverse": ""
+    },
+
+    "border": {
+      "default": "",
+      "strong": ""
+    },
+
+    "primary": {
+      "main": "",
+      "hover": "",
+      "pressed": ""
+    },
+
+    "secondary": {
+      "background": "",
+      "hover": ""
+    },
+
+    "state": {
+      "disabled_bg": "",
+      "disabled_text": ""
+    },
+
+    "sidebar": {
+      "background": "",
+      "hover": "",
+      "active": "",
+      "text": "",
+      "text_active": ""
+    },
+
+    "status": {
+      "info_bg": "",
+      "info_text": "",
+
+      "success_bg": "",
+      "success_text": ""
+    }
+  }
+}

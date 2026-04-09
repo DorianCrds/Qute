@@ -1,15 +1,51 @@
 {
   "colors": {
-    "primary": "#2980b9",
-    "background": "#ffffff",
-    "text": "#000000"
-  },
-  "radius": {
-    "sm": "4px",
-    "md": "6px"
-  },
-  "spacing": {
-    "sm": "6px",
-    "md": "10px"
+    "base": {
+      "background": "#F6F8FB",
+      "surface": "#FFFFFF",
+      "surface_secondary": "#F0F4F9"
+    },
+
+    "text": {
+      "primary": "#1F2A37",
+      "secondary": "#5B6B7C",
+      "inverse": "#FFFFFF"
+    },
+
+    "border": {
+      "default": "#E3E8EF",
+      "strong": "#CED4DA"
+    },
+
+    "primary": {
+      "main": "#4C6EF5",
+      "hover": "#3F5CE6",
+      "pressed": "#364FC7"
+    },
+
+    "secondary": {
+      "background": "#FFFFFF",
+      "hover": "#F0F4F9"
+    },
+
+    "state": {
+      "disabled_bg": "#E3E8EF",
+      "disabled_text": "#9AA7B4"
+    },
+
+    "sidebar": {
+      "background": "#F3F6FA",
+      "hover": "#EDF2F8",
+      "active": "#E7F0FA",
+      "text": "#5B6B7C",
+      "text_active": "#4C6EF5"
+    },
+
+    "status": {
+      "info_bg": "#E7F0FA",
+      "info_text": "#2F5C8F",
+      "success_bg": "#E6F4EE",
+      "success_text": "#2E7D5A"
+    }
   }
 }

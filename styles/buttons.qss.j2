@@ -1,10 +1,30 @@
 QPushButton {
-    background-color: {{ colors.primary }};
-    color: {{ colors.text }};
+    background-color: {{ colors.secondary.background }};
+    color: {{ colors.text.primary }};
+    border: 1px solid {{ colors.border.default }};
     border-radius: {{ radius.md }};
     padding: {{ spacing.sm }};
 }
 
+QPushButton:hover {
+    background-color: {{ colors.secondary.hover }};
+}
+
+QPushButton:disabled {
+    background-color: {{ colors.state.disabled_bg }};
+    color: {{ colors.state.disabled_text }};
+}
+
 QPushButton#primaryButton {
-    background-color: {{ colors.primary }};
+    background-color: {{ colors.primary.main }};
+    color: {{ colors.text.inverse }};
+    border: none;
+}
+
+QPushButton#primaryButton:hover {
+    background-color: {{ colors.primary.hover }};
+}
+
+QPushButton#primaryButton:pressed {
+    background-color: {{ colors.primary.pressed }};
 }

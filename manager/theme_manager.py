@@ -36,6 +36,8 @@ class ThemeManager:
 
         theme_signals.theme_change_requested.connect(self.set_theme)
 
+        self.template = self._load_template()
+
         self._load_initial_theme()
 
     @classmethod
@@ -68,7 +70,11 @@ class ThemeManager:
         theme_signals.theme_applied.emit(theme_name)
 
     def available_themes(self):
-        return [f.stem for f in self.themes_path.glob("*.json")]
+        return sorted([
+            f.stem
+            for f in self.themes_path.glob("*.json")
+            if not f.stem.startswith("_")
+        ])
 
     def get_current_theme(self):
         return self.current_theme_name
@@ -90,6 +96,15 @@ class ThemeManager:
     # INTERNALS
     # ---------------------
 
+    def _load_template(self):
+        template_path = self.themes_path / "_template.json"
+
+        if not template_path.exists():
+            raise FileNotFoundError("Missing _template.json")
+
+        with open(template_path, "r", encoding="utf-8") as f:
+            return json.load(f)
+
     def _load_theme(self, theme_name: str):
         path = self.themes_path / f"{theme_name}.json"
 
@@ -99,10 +114,33 @@ class ThemeManager:
         with open(path, "r", encoding="utf-8") as f:
             return json.load(f)
 
-    @staticmethod
-    def _validate_theme(theme_data: dict):
+    def _validate_theme(self, theme_data: dict):
         if "colors" not in theme_data:
-            raise ValueError("Theme must contain a 'colors' key")
+            raise ValueError("Theme must contain 'colors' root key")
+
+        self._validate_dict(
+            template=self.template["colors"],
+            data=theme_data["colors"],
+            path="colors"
+        )
+
+    def _validate_dict(self, template: dict, data: dict, path: str):
+        for key, value in template.items():
+            if key not in data:
+                raise ValueError(f"Missing theme key: {path}.{key}")
+
+            if isinstance(value, dict):
+                if not isinstance(data[key], dict):
+                    raise ValueError(f"Invalid type for key: {path}.{key} (expected object)")
+
+                self._validate_dict(
+                    template=value,
+                    data=data[key],
+                    path=f"{path}.{key}"
+                )
+            else:
+                if not isinstance(data[key], str):
+                    raise ValueError(f"Invalid type for key: {path}.{key} (expected string)")
 
     def _render_all_styles(self, theme_data: dict):
         qss = ""
