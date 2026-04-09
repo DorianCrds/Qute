@@ -10,7 +10,6 @@ def run_app():
     app = QApplication([])
 
     theme_manager = ThemeManager.instance(app)
-    theme_manager.set_theme("light")
 
     window = QWidget()
     layout = QVBoxLayout(window)

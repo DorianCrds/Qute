@@ -2,6 +2,8 @@
 from PySide6.QtCore import QObject, Signal
 
 class ThemeSignals(QObject):
-    theme_changed = Signal(str)
+    theme_change_requested = Signal(str)
+
+    theme_applied = Signal(str)
 
 theme_signals = ThemeSignals()
