@@ -1,11 +1,11 @@
 # manager/theme_manager.py
-import os
 import json
 from pathlib import Path
 
 from PySide6.QtGui import QFontDatabase, QFont
 from jinja2 import Environment, FileSystemLoader
 
+from core.signals import theme_signals
 from design_system.radius import Radius
 from design_system.spacing import Spacing
 from design_system.typography import Typography
@@ -29,7 +29,11 @@ class ThemeManager:
         self.env = Environment(loader=FileSystemLoader(str(self.styles_path)))
 
         self.current_theme = None
+        self.current_theme_name = None
 
+        theme_signals.theme_changed.connect(self.set_theme)
+
+        theme_signals.theme_changed.emit(self.available_themes()[0])
 
     @classmethod
     def instance(cls, app=None, **kwargs):
@@ -44,14 +48,21 @@ class ThemeManager:
     # ---------------------
 
     def set_theme(self, theme_name: str):
+        if theme_name not in self.available_themes():
+            raise ValueError(f"Unknown theme: {theme_name}")
+
         theme_data = self._load_theme(theme_name)
         self.current_theme = theme_data
+        self.current_theme_name = theme_name
 
         qss = self._render_all_styles(theme_data)
         self.app.setStyleSheet(qss)
 
     def available_themes(self):
         return [f.stem for f in self.themes_path.glob("*.json")]
+
+    def get_current_theme(self):
+        return self.current_theme_name
 
     # ---------------------
     # INTERNALS

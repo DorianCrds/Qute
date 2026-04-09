@@ -1,6 +1,9 @@
-from PySide6.QtWidgets import QApplication, QPushButton, QWidget, QVBoxLayout
+# example/main.py
+from PySide6.QtWidgets import QApplication, QWidget, QVBoxLayout
 
 from manager.theme_manager import ThemeManager
+from widgets.theme_radio_group import ThemeRadioGroup
+from widgets.theme_toggle_button import ThemeToggleButton
 
 
 def run_app():
@@ -12,10 +15,14 @@ def run_app():
     window = QWidget()
     layout = QVBoxLayout(window)
 
-    btn = QPushButton("Click me")
-    btn.setObjectName("primaryButton")
+    # Example with radio buttons group to handle multiple themes
+    group = ThemeRadioGroup(theme_manager.available_themes())
+    layout.addWidget(group)
 
-    layout.addWidget(btn)
+    # # Example with push buttons to handle themes pair (light/dark)
+    # btn = ThemeToggleButton()
+    # layout.addWidget(btn)
+
     window.show()
 
     app.exec()
