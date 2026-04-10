@@ -51,6 +51,10 @@ class ThemeManager:
             cls._instance = cls(app, **kwargs)
         return cls._instance
 
+    @classmethod
+    def reset_instance(cls):
+        cls._instance = None
+
     # ---------------------
     # PUBLIC API
     # ---------------------
