@@ -18,7 +18,7 @@ class ThemeToggleButton(QPushButton):
 
     def _on_toggled(self, checked):
         theme = self.dark if checked else self.light
-        theme_signals.theme_changed.emit(theme)
+        theme_signals.theme_change_requested.emit(theme)
 
     def _sync(self, theme_name):
         self.setChecked(theme_name == self.dark)
