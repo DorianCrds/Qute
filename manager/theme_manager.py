@@ -142,6 +142,10 @@ class ThemeManager:
                 if not isinstance(data[key], str):
                     raise ValueError(f"Invalid type for key: {path}.{key} (expected string)")
 
+        for key in data:
+            if key not in template:
+                raise ValueError(f"Unknown theme key: {path}.{key}")
+
     def _render_all_styles(self, theme_data: dict):
         qss = ""
 
