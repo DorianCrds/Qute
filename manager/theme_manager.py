@@ -160,7 +160,7 @@ class ThemeManager:
     def _render_all_styles(self, theme_data: dict):
         qss = ""
 
-        for file in self.styles_path.glob("*.qss.j2"):
+        for file in sorted(self.styles_path.glob("*.qss.j2")):
             template = self.env.get_template(file.name)
             qss += template.render(
                 colors=theme_data['colors'],
