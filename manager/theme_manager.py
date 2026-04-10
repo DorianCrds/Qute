@@ -14,6 +14,7 @@ from design_system.typography import Typography
 
 class ThemeManager:
     _instance = None
+    DEFAULT_THEME = "light"
 
     def __init__(self, app, themes_path=None, styles_path=None, fonts_path=None):
         self.app = app
@@ -97,9 +98,10 @@ class ThemeManager:
 
         if saved and saved in self.available_themes():
             self.set_theme(saved)
+        elif self.DEFAULT_THEME in self.available_themes():
+            self.set_theme(self.DEFAULT_THEME)
         else:
-            default = self.available_themes()[0]
-            self.set_theme(default)
+            raise RuntimeError("No valid theme found")
 
     # ---------------------
     # INTERNALS
