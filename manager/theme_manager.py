@@ -79,6 +79,15 @@ class ThemeManager:
     def get_current_theme(self):
         return self.current_theme_name
 
+    def get_color(self, path: str):
+        return self._get_nested(self.current_theme["colors"], path)
+
+    @staticmethod
+    def _get_nested(data, path):
+        for key in path.split("."):
+            data = data[key]
+        return data
+
     # ---------------------
     # INITIALIZATION
     # ---------------------
