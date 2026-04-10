@@ -1,5 +1,6 @@
 # manager/theme_manager.py
 import json
+import re
 from pathlib import Path
 
 from PySide6.QtCore import QSettings
@@ -15,6 +16,7 @@ from design_system.typography import Typography
 class ThemeManager:
     _instance = None
     DEFAULT_THEME = "light"
+    HEX_COLOR = re.compile(r"^#([0-9A-Fa-f]{6})$")
 
     def __init__(self, app, themes_path=None, styles_path=None, fonts_path=None):
         self.app = app
@@ -152,6 +154,9 @@ class ThemeManager:
             else:
                 if not isinstance(data[key], str):
                     raise ValueError(f"Invalid type for key: {path}.{key} (expected string)")
+
+                if not self.HEX_COLOR.match(data[key]):
+                    raise ValueError(f"Invalid color format: {path}.{key}")
 
         for key in data:
             if key not in template:
