@@ -1,4 +1,4 @@
-# manager/theme_manager.py
+# qute/manager/theme_manager.py
 import json
 import re
 from pathlib import Path
@@ -7,10 +7,10 @@ from PySide6.QtCore import QSettings
 from PySide6.QtGui import QFontDatabase, QFont
 from jinja2 import Environment, FileSystemLoader
 
-from core.signals import theme_signals
-from design_system.radius import Radius
-from design_system.spacing import Spacing
-from design_system.typography import Typography
+from qute.core.signals import theme_signals
+from qute.design_system.radius import Radius
+from qute.design_system.spacing import Spacing
+from qute.design_system.typography import Typography
 
 
 class ThemeManager:

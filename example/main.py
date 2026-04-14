@@ -1,9 +1,9 @@
-# example/main.py
+# qute/example/main.py
 from PySide6.QtWidgets import QApplication, QWidget, QVBoxLayout
 
-from manager.theme_manager import ThemeManager
-from widgets.theme_radio_group import ThemeRadioGroup
-from widgets.theme_toggle_button import ThemeToggleButton
+from qute.manager.theme_manager import ThemeManager
+from qute.widgets.theme_radio_group import ThemeRadioGroup
+from qute.widgets.theme_toggle_button import ThemeToggleButton
 
 
 def run_app():

@@ -1,4 +1,4 @@
-# design_system/spacing.py
+# qute/design_system/spacing.py
 
 class Spacing:
     XS = 4

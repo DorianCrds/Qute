@@ -1,4 +1,4 @@
-# design_system/radius.py
+# qute/design_system/radius.py
 
 class Radius:
     # Base scale

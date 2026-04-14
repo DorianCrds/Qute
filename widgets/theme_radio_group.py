@@ -1,6 +1,6 @@
-# widgets/theme_radio_group.py
+# qute/widgets/theme_radio_group.py
 from PySide6.QtWidgets import QWidget, QVBoxLayout, QRadioButton, QButtonGroup
-from core.signals import theme_signals
+from qute.core.signals import theme_signals
 
 
 class ThemeRadioGroup(QWidget):

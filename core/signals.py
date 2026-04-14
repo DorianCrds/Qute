@@ -1,4 +1,4 @@
-# core/signals.py
+# qute/core/signals.py
 from PySide6.QtCore import QObject, Signal
 
 class ThemeSignals(QObject):

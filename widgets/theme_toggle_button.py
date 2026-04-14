@@ -1,6 +1,6 @@
-# widgets/theme_toggle_button.py
+# qute/widgets/theme_toggle_button.py
 from PySide6.QtWidgets import QPushButton
-from core.signals import theme_signals
+from qute.core.signals import theme_signals
 
 
 class ThemeToggleButton(QPushButton):

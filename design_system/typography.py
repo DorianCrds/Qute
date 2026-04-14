@@ -1,4 +1,4 @@
-# design_system/typography.py
+# qute/design_system/typography.py
 
 from PySide6.QtGui import QFont
 
