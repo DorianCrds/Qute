@@ -47,7 +47,7 @@ class ThemeManager:
     def instance(cls, app=None, **kwargs):
         if cls._instance is None:
             if app is None:
-                raise ValueError("App required for first init")
+                raise ValueError("ThemeManager not initialized")
             cls._instance = cls(app, **kwargs)
         return cls._instance
 
